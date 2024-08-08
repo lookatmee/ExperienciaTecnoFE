@@ -1,12 +1,11 @@
-<nav class="navbar">
-  <div class="title-color">Experiencia Tecno</div>
-  <div class="icons">
-    <a href="https://wa.me/573103593479" target="_blank">
-      <i class="fa-brands fa-whatsapp"></i>
-    </a>
-    <a href="https://www.instagram.com/adolfojinete" target="_blank">
-      <i class="fa-brands fa-instagram"></i>
-    </a>
-    <i class="fa-regular fa-user"></i>
+<nav class="px-10 py-6 shadow-lg flex sm:flex-row flex-col justify-between sm:items-center">
+  <div class="text-sm font-bold uppercase title-color">Experiencia Tecno</div>
+  <div class="sm:w-[30%] w-[100%] flex justify-end text-3xl">
+    @for (item of menuItems; track item.url) {
+      <a [href]="item.url" target="_blank">
+        <i [class]="item.class"></i>
+      </a>
+    }
+    <i class="fa-regular fa-user mt-[2px]"></i>
   </div>
 </nav>
